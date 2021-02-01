@@ -1,0 +1,9 @@
+"scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native run-android",
+    "test": "jest --watch",
+    "lint": "eslint ."
+  },
+
+에서 start와 test를 확인
