@@ -8,6 +8,8 @@ target 'DailyReport' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'ReactNativeLocalization', :path => '../node_modules/react-native-localization'
+
   target 'DailyReportTests' do
     inherit! :complete
     # Pods for testing
