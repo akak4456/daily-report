@@ -1,3 +1,3 @@
 export default {
-    step:'step222',
+  MAIN_TITLE: '데일리 리포트',
 };

@@ -1,45 +1,29 @@
 import React, {Component} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  Button,
-} from 'react-native';
-import { Router,Scene } from 'react-native-router-flux';
+import {Router, Scene} from 'react-native-router-flux';
 import MainScreen from './components/MainScreen';
 import SubScreen from './components/SubScreen';
-
-import {strings, changeLanguage} from './lang';
-
-class App extends Component{
-  constructor(){
-    //ABC
+import {string, strings} from './lang/index';
+class App extends Component {
+  constructor() {
     super();
-        this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
-  };
+    this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
+  }
 
-  forceUpdateHandler(){
+  forceUpdateHandler() {
     this.forceUpdate();
-  };
+  }
 
-  render(){
-    return(
+  render() {
+    return (
       <Router>
         <Scene key="root">
           <Scene
             key="main"
             component={MainScreen}
-            title="MainScreen"
+            title={strings.MAIN_TITLE}
             initial={true}
           />
-          <Scene
-            key="sub"
-            component={SubScreen}
-            title="SubScreen"
-            />
+          <Scene key="sub" component={SubScreen} title="SubScreen" />
         </Scene>
       </Router>
     );
