@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainScreen /> renders without crashing 1`] = `
+<View>
+  <Text
+    onPress={[Function]}
+  >
+    메인
+  </Text>
+</View>
+`;

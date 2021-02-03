@@ -15,7 +15,7 @@ class MainScreen extends Component {
   render() {
     return (
       <View>
-        <Text onPress={() => Actions.sub()}>메인asdflek</Text>
+        <Text onPress={() => Actions.sub()}>메인</Text>
       </View>
     );
   }
