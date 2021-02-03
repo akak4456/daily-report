@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React, {Component} from 'react';
 import {
   SafeAreaView,
@@ -16,6 +8,9 @@ import {
   StatusBar,
   Button,
 } from 'react-native';
+import { Router,Scene } from 'react-native-router-flux';
+import MainScreen from './components/MainScreen';
+import SubScreen from './components/SubScreen';
 
 import {strings, changeLanguage} from './lang';
 
@@ -32,12 +27,21 @@ class App extends Component{
 
   render(){
     return(
-      <View>
-        <Text>
-          {strings.step}
-        </Text>
-        <Button title="타이틀" onPress={()=>{changeLanguage('en');this.forceUpdate();}} />
-      </View>
+      <Router>
+        <Scene key="root">
+          <Scene
+            key="main"
+            component={MainScreen}
+            title="MainScreen"
+            initial={true}
+          />
+          <Scene
+            key="sub"
+            component={SubScreen}
+            title="SubScreen"
+            />
+        </Scene>
+      </Router>
     );
   }
 }
